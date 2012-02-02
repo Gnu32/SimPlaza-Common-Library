@@ -1,6 +1,6 @@
 /*  ============================================
     == SIMPLAZA.NET JS COMMON LIBRARY ==========
-    Version: v0.2
+    Version: v0.3
 
     by The Major / Crome Tysnomi / Ayman Habayeb
     http://gnu32.deviantart.com
@@ -120,6 +120,10 @@ Element.prototype.hasClass = function(classname) { return hasClass(this, classna
 Element.prototype.addClass = function(classname) { return addClass(this, classname); }
 Element.prototype.delClass = function(classname) { return delClass(this, classname); }
 Element.prototype.toggleClass = function(classname) { return toggleClass(this, classname); }
+
+Node.prototype.destroyNode = function() {
+    this.parentNode.removeChild(this);
+}
 
 Node.prototype.hasAncestorID = function (id) {
     var pointer = this;
